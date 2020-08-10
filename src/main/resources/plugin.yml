@@ -1,0 +1,9 @@
+name: HotpotPlugin
+main: cn.hotpot.HotpotPlugin
+version: 1.0.0
+commands:
+  hp:
+    description: This is a demo command.
+    usage: /<command> [player]
+#    permission: <plugin name>.basic
+#    permission-message: You don't have <permission>
