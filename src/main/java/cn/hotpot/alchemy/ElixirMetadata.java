@@ -6,7 +6,7 @@ import lombok.Data;
 
 /**
  * @author qinzhu
- * 丹药元数据
+ * 丹药模板
  */
 @Data
 public class ElixirMetadata {
@@ -33,7 +33,12 @@ public class ElixirMetadata {
     private String entityId;
 
     /**
-     * 成功几率，取值范围[1,100]
+     * 成功概率，取值范围[1,100]
      */
-    private int chanceOfSuccess;
+    private Integer probabilityOfSuccess;
+
+    /**
+     * 炼制的数量
+     */
+    private Integer number;
 }

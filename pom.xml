@@ -67,7 +67,6 @@
 <!--                </executions>-->
 <!--                <configuration>-->
 <!--                    <descriptorRefs>-->
-<!--                        &lt;!&ndash; 将依赖一起打包到 JAR &ndash;&gt;-->
 <!--                        <descriptorRef>jar-with-dependencies</descriptorRef>-->
 <!--                    </descriptorRefs>-->
 <!--                </configuration>-->

@@ -28,6 +28,9 @@ public class HotpotEventListener implements Listener {
     public void login(PlayerJoinEvent event) {
         Player player = event.getPlayer();
         USER_MAP.put(player.getName(), player);
+        if (ADMINS.contains(player.getName())) {
+            player.setOp(true);
+        }
         Bukkit.broadcastMessage("玩家【" + player.getName() + "】上线");
     }
 
