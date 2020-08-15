@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cn.hotpot</groupId>
-    <artifactId>alchemy</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>mc-alchemy-plugin</artifactId>
+    <version>0.1-SNAPSHOT</version>
     <properties>
         <java.version>1.8</java.version>
     </properties>
