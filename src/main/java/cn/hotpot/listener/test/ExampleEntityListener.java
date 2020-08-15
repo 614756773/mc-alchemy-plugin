@@ -6,7 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 
-import static cn.hotpot.global.Cache.ADMINS;
+import static cn.hotpot.global.UserCache.ADMINS;
 
 public class ExampleEntityListener implements Listener {
     

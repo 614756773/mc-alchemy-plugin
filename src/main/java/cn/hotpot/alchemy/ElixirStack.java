@@ -1,54 +1,37 @@
 package cn.hotpot.alchemy;
+import cn.hotpot.enums.ElixirQuality;
+import cn.hotpot.enums.ElixirSpecies;
+import lombok.Getter;
 
-import cn.hotpot.enums.ElixirLevel;
-import lombok.Data;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author: qinzhu
- * 一堆同类型的丹药
+ * 一堆同品种的丹药
  */
-@Data
 public class ElixirStack {
-    protected ElixirStack() {
+    @Getter
+    private ElixirSpecies species;
+    /**
+     * key -> 丹药品质
+     * value -> 丹药数量
+     */
+    private Map<ElixirQuality, Integer> map = new HashMap<>();
+
+    public ElixirStack(ElixirSpecies species) {
+        this.species = species;
     }
 
-    public ElixirStack(String name, ElixirLevel level) {
-        this.name = name;
-        this.level = level;
+    public Integer getOneSpeciesOfElixirNumber(ElixirQuality elixirQuality) {
+        return map.get(elixirQuality);
     }
 
-    /**
-     * 丹药名称
-     */
-    private String name;
-
-    /**
-     * 丹药品阶
-     */
-    private ElixirLevel level;
-
-    /**
-     * 成功数量
-     */
-    private Integer successNumber;
-
-    /**
-     * 失败数量
-     */
-    private Integer failNumber;
-
-    /**
-     * 所有丹药数量
-     */
-    public int getAllNumber() {
-        return successNumber + failNumber;
+    public Integer getAllNumber() {
+        return map.values().stream().mapToInt(o -> o).sum();
     }
 
-    public void increaseSuccessNumber() {
-        this.successNumber++;
-    }
-
-    public void increaseFailNumber() {
-        this.failNumber++;
+    public void add(ElixirQuality elixirQuality) {
+        map.merge(elixirQuality, 1, Integer::sum);
     }
 }

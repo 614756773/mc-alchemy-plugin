@@ -9,13 +9,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.*;
 import org.bukkit.inventory.ItemStack;
-import sun.misc.Cache;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import static cn.hotpot.global.Cache.ADMINS;
-import static cn.hotpot.global.Cache.USER_MAP;
+import static cn.hotpot.global.UserCache.ADMINS;
+import static cn.hotpot.global.UserCache.USER_MAP;
 
 
 /**

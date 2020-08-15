@@ -1,17 +1,14 @@
 package cn.hotpot.command;
 
 import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.util.Vector;
 
 import java.util.Objects;
 
-import static cn.hotpot.global.Cache.USER_MAP;
+import static cn.hotpot.global.UserCache.USER_MAP;
 
 public class MyCommandExecutor implements CommandExecutor {
 	/**
